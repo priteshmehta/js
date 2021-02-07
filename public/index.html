@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>This is React App</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="number.css">
+    </head>
+<body>
+    <div id="app" class="flex-container">
+        <div class="row">
+            <div class="flex-item">
+                <label id="numberLbl">1</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item">
+                <button id="conter" class="button">Click Me</button>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    console.log("Random number generator from 1 to 100")
+    const $clickBtn = document.getElementById("conter")
+    const $numberLbl = document.getElementById("numberLbl")
+        $clickBtn.addEventListener('click', () => {
+            $numberLbl.innerHTML = Math.floor(Math.random() * 100)
+    })
+
+//console.log(Math.floor(Math.random() * 100)))
+</script>
+
+    
+
+</body>
+</html>

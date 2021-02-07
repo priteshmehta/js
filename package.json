@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "live-server",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "http-live-server": "^1.2.0"
   }

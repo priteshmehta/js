@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Sight Words</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="number.css">
+    </head>
+<body>
+    <div id="app" class="flex-container">
+        <div class="row">
+            <div class="flex-item hindi-item">
+                <label id="wordLbl">अ</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item">
+                <button id="word" class="button">Click Me</button>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    hindi_alphabet = ["अ","आ", "इ","ई", "उ", "ऊ", "ऋ", "ए", "ऐ", "ओ", "औ", "अं", "अः"]
+    hindi_consonants = ["क", "ख", "ग", "घ", "ङ", "च", "छ", "ज", "झ", "ञ", "ट", "ठ", "ड", "ढ",
+                        "ण", "त", "थ", "द", "ध", "न", "प", "फ", "ब", "भ", "म", "य", "र", "ल", 
+                        "व", "श", "ष", "स", "ह", "क्ष", "त्र", "ज्ञ", "श्र"]
+    hindi_alphabet_len = hindi_alphabet.length
+    const $clickBtn = document.getElementById("word")
+    const $wordLbl = document.getElementById("wordLbl")
+        $clickBtn.addEventListener('click', () => {
+            let index = Math.floor(Math.random() * 100) % hindi_alphabet_len
+            $wordLbl.innerHTML = hindi_alphabet[index] 
+    })
+</script>
+
+    
+
+</body>
+</html>

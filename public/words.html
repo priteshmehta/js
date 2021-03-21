@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Sight Words</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="number.css">
+    </head>
+<body>
+    <div id="app" class="flex-container">
+        <div class="row">
+            <div class="flex-item">
+                <label id="wordLbl">Hello</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item">
+                <button id="word" class="button">Click Me</button>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    console.log("Random words generator")
+    word_list = [
+                "one", "two", "three", "four", "five", "six", "seven", "eight",
+                "nine", "ten", "this", "that", "the", "cat", "dog", "fish",
+                "elephant", "can", "could", "called", "he", "his", "had", "how", "has", "her", "have", "him", 
+                "the", "to", "they", "this", "there", "them", "then", "these", "two", "time", "than", "that", "their",
+                "was", "with", "what", "were", "when", "we", "which", "will", 
+                "would", "words", "where", "water", "who", "way", "ice-cream", "all",
+                "are", "black", "brown", "did", "get", "at", "like", "must", "please", "ride", "yes", "would",
+                "girl", "boy", "bird", "colour", "doll", "rain"
+                ]
+    max_words = word_list.length
+    console.log(max_words)
+    const $clickBtn = document.getElementById("word")
+    const $wordLbl = document.getElementById("wordLbl")
+        $clickBtn.addEventListener('click', () => {
+            let index = Math.floor(Math.random() * 100) % max_words
+            $wordLbl.innerHTML = word_list[index]
+    })
+</script>
+
+    
+
+</body>
+</html>

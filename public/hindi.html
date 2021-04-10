@@ -26,9 +26,11 @@
     hindi_alphabet_len = hindi_alphabet.length
     const $clickBtn = document.getElementById("word")
     const $wordLbl = document.getElementById("wordLbl")
+    let i = 0
         $clickBtn.addEventListener('click', () => {
-            let index = Math.floor(Math.random() * 100) % hindi_alphabet_len
+            let index = i % hindi_alphabet_len
             $wordLbl.innerHTML = hindi_alphabet[index] 
+            i++
     })
 </script>
 

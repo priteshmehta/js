@@ -28,6 +28,17 @@
     text-align: center;
     margin: 5px;
 }
+.flex-item-sum {
+    flex-grow: 10;
+    font-size: 100px;
+    width: 700px;
+    /* border: 2px solid #666; */
+    color: rgb(56, 2, 106);
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
 .button {
     background-color: #4CAF50; /* Green */
     border: none;

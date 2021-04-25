@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Addition App</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="number.css">
+    </head>
+<body>
+    <div id="app" class="flex-container">
+        <div class="row">
+            <div class="flex-item-sum">
+                <label id="numberLbl1">1</label>
+                <label id="numberLbl">+</label>
+                <label id="numberLbl2">1</label>
+                <label id="numberLbl2">=</label>
+                <label id="resultLbl"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item-sum">
+                <button id="conter" class="button">Click Me</button>
+                <button id="conterCheck" class="button">Check</button>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    console.log("Random number generator from 1 to 100")
+    const $clickBtn = document.getElementById("conter")
+    const $counterCheckBtn = document.getElementById("conterCheck")
+    const $numberLbl1 = document.getElementById("numberLbl1")
+    const $numberLbl2 = document.getElementById("numberLbl2")
+    const $resultLbl = document.getElementById("resultLbl")
+
+    $counterCheckBtn.addEventListener('click', () => {
+            $resultLbl.innerHTML = Number($numberLbl1.innerHTML) + Number($numberLbl2.innerHTML)
+    })
+    
+    $clickBtn.addEventListener('click', () => {
+            $numberLbl1.innerHTML = Math.floor(Math.random() * 100)
+            $numberLbl2.innerHTML = 1 + Math.floor(Math.random() * 6)
+            $resultLbl.innerHTML = ''
+    })
+
+</script>
+</body>
+</html>
